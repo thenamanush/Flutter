@@ -15,9 +15,7 @@ class FirstPage extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           child: Text('Navigate'),
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.white,
-          ),
+          style: ElevatedButton.styleFrom(backgroundColor: Colors.white),
           onPressed: () {
             Navigator.push(
               context,
