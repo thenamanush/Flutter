@@ -14,7 +14,6 @@ class FirstPage extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Center(
         child: ElevatedButton(
-          child: Text('Navigate'),
           style: ElevatedButton.styleFrom(backgroundColor: Colors.white),
           onPressed: () {
             Navigator.push(
@@ -22,6 +21,7 @@ class FirstPage extends StatelessWidget {
               MaterialPageRoute(builder: (context) => SecondPage()),
             );
           },
+          child: Text('Navigate'),
         ),
       ),
     );

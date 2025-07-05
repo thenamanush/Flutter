@@ -1,5 +1,4 @@
 import 'package:fitness/pages/first_page.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 void main() {
