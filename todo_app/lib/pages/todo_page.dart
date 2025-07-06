@@ -12,7 +12,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   // list of todo items
   List todoList = [
-    ['make tutorial', false],
+    ['make todo app', false],
     ['do exercise', false],
   ];
 
