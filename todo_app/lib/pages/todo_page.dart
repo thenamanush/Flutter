@@ -14,6 +14,7 @@ class _HomePageState extends State<HomePage> {
   List todoList = [
     ['make todo app', false],
     ['do exercise', false],
+    ['prepare assignment', false],
   ];
 
   // checkbox changed
@@ -24,16 +25,19 @@ class _HomePageState extends State<HomePage> {
   }
 
   // create new task
-  void createNewTask(){
-    showDialog(context: context, builder: (context){
-      return DialogueBox();
-    },);
+  void createNewTask() {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return DialogueBox();
+      },
+    );
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.greenAccent,
+      backgroundColor: Colors.cyan,
       appBar: AppBar(
         backgroundColor: Colors.white,
         title: const Text("To Do"),
@@ -41,16 +45,17 @@ class _HomePageState extends State<HomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: createNewTask,
-        child: Icon(Icons.add)
-        ),
+        child: Icon(Icons.add),
+      ),
 
       body: ListView.builder(
         itemCount: todoList.length,
         itemBuilder: (context, index) {
-          return ToDoTile(taskName: todoList[index][0],
-           taskCompleted:todoList[index][1],
-            onChanged: (value) =>checkBoxChanged(value, index) ,
-            );
+          return ToDoTile(
+            taskName: todoList[index][0],
+            taskCompleted: todoList[index][1],
+            onChanged: (value) => checkBoxChanged(value, index),
+          );
         },
       ),
     );
