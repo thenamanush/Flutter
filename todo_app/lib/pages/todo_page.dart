@@ -12,9 +12,10 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   // list of todo items
   List todoList = [
-    ['make todo app', false],
+    ['make todo app', true],
     ['do exercise', false],
     ['prepare assignment', false],
+    ['call dilu mesab', false],
   ];
 
   // checkbox changed
@@ -40,7 +41,7 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.cyan,
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: const Text("To Do"),
+        title: const Text("Bala Rebo"),
         elevation: 0,
       ),
       floatingActionButton: FloatingActionButton(
